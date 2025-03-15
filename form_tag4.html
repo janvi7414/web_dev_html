@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<body>
+<form>
+    <h2>Job Application</h2>
+    <label for="user_name">Name: </label>
+    <br/>
+    <input type="text" id="user_name">
+    <br/>
+    <label for="user_mail">Email: </label>
+    <br/>
+    <input type="email" id="user_mail">
+    <br/>
+    <label for="user_phone">Phone: </label>
+    <br/>
+    <input type="tel" id="user_phone">
+    <br/>
+    <label for="user_resume">Resume: </label>
+    <br/>
+    <input type="file" id="user_resume">
+    <br/>
+    <label for="user_exp_years">Experience(years): </label>
+    <br/>
+    <input type="number" id="user_exp_years">
+    <br/>
+    <fieldset>
+        <legend>Skills</legend>
+        <input type="checkbox" id="html" name="skills">
+        <label for="html">HTML</label>
+        <br/>
+        <input type="checkbox" id="css" name="skills">
+        <label for="css">CSS</label>
+        <br/>
+        <input type="checkbox" id="javascript" name="skills">
+        <label for="javascript">JavaScript</label>
+        <br/>
+    </fieldset>
+
+    <label for="user_highest_edu">Highest Education: </label>
+    <select id="user_highest_edu">
+        <option value="ssc">SSC</option>
+        <option value="hsc">HSC</option>
+    </select>
+
+    <br/>
+    <label>Availability: </label>
+    <br/>
+    <input type="radio" id="full_time" name="availability">
+    <label for="full_time">Full-time</label>
+    <br/>
+    <input type="radio" id="part_time" name="availability">
+    <label for="part_time">Part-time</label>
+    <br/>
+
+    <label for="add_comment">Additional comments: </label>
+    <br/>
+    <textarea id="add_comment"></textarea>
+    <br/>
+    <input type="reset">
+    <input type="submit">
+</form>
+</body>
+</html>
