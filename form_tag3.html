@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<body>
+<form>
+    <h2>Event Registration</h2>
+    <label for="user_name">Name:</label>
+    <br/>
+    <input type="text" id="user_name">
+    <br/>
+    <label for="user_mail">Email:</label>
+    <br/>
+    <input type="email" id="user_mail">
+    <br/>
+    <label for="user_phone">Phone:</label>
+    <br/>
+    <input type="tel" id="user_phone">
+    <br/>
+    <label for="user_occupation">Occupation:</label>
+    <br/>
+    <select id="user_occupation">
+        <option disabled value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="worker">Worker</option>
+        <option label="oo" value="other">Other</option>
+    </select>
+
+    <div>
+        <br/>
+    <label>Topics of interest: </label>
+    <br/>
+    <input type="checkbox" id="html" name="user_interest">
+    <label for="html">HTML</label>
+    <br/>
+    <input type="checkbox" id="css" name="user_interest">
+    <label for="css">CSS</label>
+    <br/>
+    <input type="checkbox" id="javascript" name="user_interest">
+    <label for="javascript">JavaScript</label>
+    </div>
+
+    <br/>
+    <label for="user_comments">Comments: </label>
+    <br/>
+    <textarea placeholder="start typing..." id="user_comments"></textarea>
+</form>
+</body>
+</html>
