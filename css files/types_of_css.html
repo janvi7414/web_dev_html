@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    internal css is defined inside head tag using style tag-->
+    <style>
+        p{
+        background-color: grey;
+        }
+<!--        here "p" is selector/element and "background-color" attribute with "grey" value-->
+    </style>
+<!--    external css is used by linking external file with .css using link tag-->
+    <link rel="stylesheet" href="types_of_css.css">
+    <title>Document</title>
+</head>
+<body>
+<h2>Welcome to web developement</h2>
+<!--inline css is to add styling inside tag itself using style attribute-->
+<!--when different styling is provided using internal cass and inline css both inline will win-->
+<!--to make internal css win add "!important" to it-->
+<!--when inline css is absent styling works as per order i.e. what change made at the last will win-->
+<p style="color:red" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet, asperiores at aut autem corporis cumque
+cupiditate deserunt dignissimos eaque eligendi eos expedita hic illum impedit iste iure iusto labore libero magni
+minus nemo nobis numquam odit pariatur, perspiciatis possimus quam quidem repellendus repudiandae sed sequi tenetur
+vel voluptatem voluptatibus.</p>
+<p style="background-color:yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet, asperiores at aut autem corporis cumque
+    cupiditate deserunt dignissimos eaque eligendi eos expedita hic illum impedit iste iure iusto labore libero magni
+    minus nemo nobis numquam odit pariatur, perspiciatis possimus quam quidem repellendus repudiandae sed sequi tenetur
+    vel voluptatem voluptatibus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet, asperiores at aut autem corporis cumque
+    cupiditate deserunt dignissimos eaque eligendi eos expedita hic illum impedit iste iure iusto labore libero magni
+    minus nemo nobis numquam odit pariatur, perspiciatis possimus quam quidem repellendus repudiandae sed sequi tenetur
+    vel voluptatem voluptatibus.</p>
+</body>
+</html>
