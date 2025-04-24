@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #container{
+            background-color:beige;
+            padding:10px;
+            display:flex;
+            height: 1800px;
+            /*            flex is a 1D layout method*/
+            /*            flex-wrap:wrap;*/
+            /*            here default main axis is horizontal*/
+            /*            justify-content:space-between;*/
+            /*            align-items:flex-end;*/
+            align-items:stretch;
+            /*            remove height of div for stretch effect if height of the div is not mentioned it is stretched by default*/
+            /*            align-content:start;*/
+            /*            when the display shrinks the items wraps such that they have space inbetween them to avoid that space use align-content: start,end,center try flex-wrap:wrap
+                            height of container: 800 and no align-content*/
+
+        }
+
+        /*            flex-direction:column-reverse;*/
+        /*            by default when display is set as flex it has it's alignment in row
+                        main-axis:horizontal
+                        cross-axis:vertical
+                        parent container: flex container
+                        items inside : flex items*/
+
+        /*            initially the content items will squize even if space is available in next line
+                by using flex-wrap:wrap or flex-wrap:wrap-reverse the items will wrap in next line if space is availble else will squize*/
+
+        /*        justify-content:start,end, center, space-between, space-evenly, space-around is used to align divs with respect to the main axis */
+
+        /*        align-items: flex-start    is used to align elements as per the cross axis
+                              : center
+                              :flex-end
+                              :stretch*/
+        /*        --properties available for flex items--
+                    flex-shrink:4  flex item will shrink at 4x speed
+                    flex-grow:5   flex item will grow at 5x speed
+                    flex-basis:400  used to set dimensions of flex item
+                    align-self:center used to align i.e. w.r.t the cross acess each item seprately
+                    order:4  order of the item*/
+        .div{
+            height:200px;
+            width:200px;
+            margin:10px;
+            border:2px,black,solid;
+        }
+        #div1{
+            background-color:blue;
+            /*            order:0;*/
+            /*            flex-shrink:10;*/
+        }
+        #div2{
+            background-color:green;
+            /*            order:-1;*/
+            /*            flex-grow:5;*/
+        }
+        #div3{
+            background-color:gray;
+        }
+        #div4{
+            background-color:orange;
+        }
+        </style>
+</head>
+<body>
+<div id="container">
+    <div class="div" id="div1"></div>
+    <div class="div" id="div2"></div>
+    <div class="div" id="div3"></div>
+    <div class="div" id="div4"></div>
+
+</div>
+</body>
+</html>
