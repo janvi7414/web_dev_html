@@ -12,34 +12,35 @@
             display:flex;
             padding:10px;
         }
+        .container1{
+            background-color:#7ee15d;
+            display:flex;
+            flex-direction:column;
+            padding:10px;
+        }
         .div{
-            height:200px;
-            width:200px;
             margin:10px;
             border:solid, black, 2px;
         }
         #div1{
             background-color:brown;
+            height:200px;
+            width:200px;
         }
         #div2{
             background-color:#ff3232;
+            height:200px;
+            width:200px;
         }
         #div3{
             background-color:#fafa83;
-        }
-        #div4{
-            background-color:skyblue;
-        }
-
-        @media (min-width:640px){
-            .container{
-                flex-direction:row;
-            }
+            height:400px;
+            width:400px;
         }
 
         @media (max-width:640px){
             .container{
-                flex-direction:column;
+                flex-direction:column-reverse;
             }
         }
 
@@ -48,11 +49,11 @@
 <body>
 <!--media query is used to make website responsive differently acc to the size of display-->
 <div class="container">
-    <div class="div" id="div1"></div>
-    <div class="div" id="div2"></div>
+    <div class="container1">
+        <div class="div" id="div1"></div>
+        <div class="div" id="div2"></div>
+    </div>
     <div class="div" id="div3"></div>
-    <div class="div" id="div4"></div>
-
 </div>
 </body>
 </html>
