@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+        }
+        .container{
+            background-color:#ffa50dcb;
+            border: 5px red;
+            height: 2000px;
+            position:relative;
+        }
+        img{
+            display:inline-block;
+            margin:5px;
+            padding: 5px;
+        }
+        .div2{
+            background-color:#e648e6;
+            height: 3000px;
+        }
+        .two_image{
+            position:absolute;
+/*                position:relative;*/
+            top:100px;
+        }
+        .four_image{
+            position:fixed;
+        }
+        .three_image{
+            position:sticky;
+            top:40px;
+        }
+    </style>
+</head>
+<body>
+<!--by default position property is static thus margin from top or other wont work on it
+thus to make it align as wanted use relative for position attribute-->
+<!--for relative positioning it is acc to the window thus space won't get ocuupied by another component-->
+<!--absolute positioning is used for overlapping in which it is applied "relative" to the closest position defining tag and "absolute" to the actual content-->
+<!--third type of positioning is fixed in which content is fixed throughout the webpage-->
+<!--forth type is sticky in which content is fixed for the parent container only-->
+<div class="container" >
+    <img src="assets/one_image.jpg" class="one_image" alt="image" height="300px" weight="300px">
+    <img src="assets/two_image.png"  class="two_image" alt="image" height="300px" weight="300px">
+    <img src="assets/three_image.png" class="three_image"  alt="image" height="300px" weight="300px">
+    <img src="assets/four_image.jpg"  class="four_image" alt="image" height="300px" weight="300px">
+
+</div>
+<div class="div2">
+
+</div>
+</body>
+</html>

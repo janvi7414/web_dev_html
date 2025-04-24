@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .box{
+            width:300px;
+            height:300px;
+            padding:1px;
+            border:solid, black, 2px;
+        }
+        .box2{
+            width:300px;
+            height:300px;
+            box-sizing:border-box;
+            border:2px,solid,black;
+            padding:1px;
+        }
+        .span1{
+            border:red,2px,solid;
+            padding:20px;
+            margin:10px;
+        }
+        .span2{
+            display:inline-block;
+            margin:20px;
+            height:300px;
+            width:300px;
+            border:solid,red,2px;
+            padding:50px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<!--block elements are the one who occupies whole width and starts from next line always-->
+<div class="box">
+box-sizing is used to keep the actual size of box the same thus when padding and other attributes are
+    added the content shrinks so that the total size remains the same. Customized height and width is not applicable.
+</div>
+<div class="box2">
+    This is with box-sizing
+</div>
+<!--inline elements-->
+<span class="span1">
+<!--    here marging can only be added in horizontal sides and padding can be added in all the four sides-->
+    This is inline element
+</span>
+<span class="span1">
+    This is inline element
+</span>
+<!--to convert inline into block and vice versa use "display attribute"-->
+<!--inline-block this is used to add feature( customizing height and widht and also adding margin in all the four sides) of block to the inline elements-->
+<br><br><br><br>
+<span class="span2">
+    Lorem ipsum dolor sit.
+</span>
+<span class="span2">
+    Lorem ipsum dolor sit.
+</span>
+
+</body>
+</html>
