@@ -9,7 +9,7 @@
     <style>
         .container{
             background-color:#f3f38c;
-            height:600px;
+            height:1000px;
             display:flex;
             flex-direction:column;
             justify-content:space-evenly;
@@ -45,6 +45,12 @@
             box-shadow:8px 12px black, 15px 20px green;
 /*            shadow to a shadow*/
         }
+/*        by default color of text shadow is black*/
+/*        except shadow-spread other arguments are ther in text shadow as well*/
+        #div6{
+            text-shadow:5px 5px 3px red, 10px 10px 3px green;
+/*            x y blur-radius color*/
+        }
     </style>
 </head>
 <body>
@@ -54,6 +60,7 @@
     <div id="div3" class="div"></div>
     <div id="div4" class="div"></div>
     <div id="div5" class="div"></div>
+    <div id="div6" class="div"> <h1>Lorem ipsum dolor</h1></div>
 </div>
 </body>
 </html>

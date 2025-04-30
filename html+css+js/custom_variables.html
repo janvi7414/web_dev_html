@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!--    customized variables declared inside an element are accessible inside that element only-->
+<!--    to access vars globally declare it inside :root{} inside style element-->
+<!--    declaration syntax:
+                --var_name:value
+         syntax to use it
+                 var(--var_name);    -->
+    <style>
+        :root{
+            --customized_width:200px;
+            --customized_color:violet;
+        }
+        .container{
+            --customized_height:400px;
+            height:var(--customized_height);
+            width:var(--customized_width);
+            background-color:var(--customized_color);
+        }
+    </style>
+</head>
+<body>
+<div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium at consectetur cumque deleniti dolor dolore doloremque dolores esse est eveniet illum in incidunt itaque maxime odio officiis pariatur praesentium, provident quam quas quos repudiandae saepe sint sit tenetur ullam vitae! At eius, explicabo ipsam laboriosam nobis quibusdam repudiandae voluptatibus.</div>
+</body>
+</html>
