@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color:#f3f38c;
+            height:600px;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+        .div{
+            height:50px;
+            width:200px;
+        }
+/*        along x vertical shadow is set as it has thickness along x axis and vice versa*/
+/*        -ve value is used for negative side of axis*/
+        #div1{
+            background-color:red;
+            box-shadow:10px 15px black;
+        }
+        #div2{
+            background-color:blue;
+            box-shadow:10px 15px 5px black;
+/*            x y bluriness-radius color*/
+        }
+        #div3{
+            background-color:blueviolet;
+            box-shadow:10px -15px 5px 10px black;
+/*            x y blurinexx shadow_spread color*/
+        }
+        #div4{
+            background-color:#702121;
+            box-shadow:inset 10px 15px 5px 2px black;
+/*            inset for shadow in inner side*/
+        }
+        #div5{
+            background-color:yellowgreen;
+            box-shadow:8px 12px black, 15px 20px green;
+/*            shadow to a shadow*/
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="div1" class="div"></div>
+    <div id="div2" class="div"></div>
+    <div id="div3" class="div"></div>
+    <div id="div4" class="div"></div>
+    <div id="div5" class="div"></div>
+</div>
+</body>
+</html>
