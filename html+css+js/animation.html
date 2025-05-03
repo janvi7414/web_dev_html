@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*        animation is the changing of elements from one style to another*/
+        /*        keyframe stores the styles data to change from to*/
+        *{
+            margin:0px;
+            padding:10px;
+        }
+        #big{
+            background-color:#89e189;
+            width:50vw;
+            height:40vh;
+/*            to prevent overflow*/
+            box-sizing:border-box;
+        }
+        #small{
+            background-color:#ff4646;
+            width:5px;
+            height:5px;
+            border-radius:15px;
+            box-shadow:5px 6px 2px #026102;
+            animation-name:right_movement;
+            animation-duration:5s;
+            animation-delay:2s;
+            position:relative;
+            animation-iteration-count:4;
+
+        }
+
+        @keyframes right_movement{
+                from{
+                    width:5px;
+                    height:5px;
+                    top:0px;
+                    left:0px;
+                }
+            to{
+                background-color:blue;
+                height:1px;
+                width:1px;
+                top:0px;
+                left:250px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="big">
+    <div id="small">
+
+    </div>
+</div>
+
+</body>
+</html>
