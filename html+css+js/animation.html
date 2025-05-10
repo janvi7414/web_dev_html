@@ -17,7 +17,7 @@
             background-color:#89e189;
             width:50vw;
             height:40vh;
-/*            to prevent overflow*/
+            /*                    to prevent overflow*/
             box-sizing:border-box;
         }
         #small{
@@ -31,16 +31,21 @@
             animation-delay:2s;
             position:relative;
             animation-iteration-count:4;
-
+            /*            animation-timing-function:cubic-bezier(0.4,1.4,1,0.2);*/
+            /*            cubic bezier to control speed at the start and the end*/
+            animation-direction:alternate;
+            /*            alternate (src to destination and des to src)
+                            reverse (des to src0
+                            alternat-reverse (des to src and src to des)*/
         }
 
         @keyframes right_movement{
-                from{
-                    width:5px;
-                    height:5px;
-                    top:0px;
-                    left:0px;
-                }
+            from{
+                width:5px;
+                height:5px;
+                top:0px;
+                left:0px;
+            }
             to{
                 background-color:blue;
                 height:1px;
@@ -49,11 +54,41 @@
                 left:250px;
             }
         }
+
+        #small2{
+            height:5px;
+            width:5px;
+            background-color:red;
+            border-radius:15px;
+            position:relative;
+            box-shadow:5px 6px 2px #026102;
+            top:10px;
+
+            /* for shorthand                 @keyframes duration | easing-function | delay |
+                                            iteration-count | direction | fill-mode | play-state | name */
+            animation: 3s ease-in 1s 2 alternate none running animation2;
+            /*            for every animation create @keyframes*/
+        }
+
+        @keyframes animation2{
+            from{
+                top:10px;
+                left:0px;
+            }
+            to{
+                top:10px;
+                left:250px;
+            }
+        }
+
     </style>
 </head>
 <body>
 <div id="big">
     <div id="small">
+
+    </div>
+    <div id="small2">
 
     </div>
 </div>
