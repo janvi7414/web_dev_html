@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height:400px;
+            width:400px;
+            background-color:#d37070;
+
+            /*            to add transition*/
+            transition-property:background-color,width;
+            /*            if transition-property:all it will perform transition smoothly else abruptly
+                    only mentioned property will be applied smoothly e.g. height as it is not mentioned in property*/
+            transition-delay:0s;
+            transition-duration:3s;
+            transition-timing-function:linear;
+
+/*            shorthand notation*/
+/*            transition:property duration timing delay*/
+/*            transition:all 3s linear 0s;*/
+
+        }
+
+        /*        to specify the action that will lead to the transition*/
+        .box:hover{
+            width:1200px;
+            background-color:#5555e4;
+            height:700px;
+        }
+    </style>
+</head>
+<body>
+<!--difference between transitionn(single movement from-state to to-state) and animation(series of transitions)-->
+<div class="box">
+
+</div>
+</body>
+</html>
