@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StydySync</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing:border-box;
+            font-family:"Arial", monospace;
+        }
+        .background{
+            height:100vh;
+            width:100vw;
+            background-color:beige;
+            display:flex;
+            flex-direction:column;
+        }
+        #header{
+        /*            background-color:#a1a16c;*/
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            width:100vw;
+            padding:2rem;
+        }
+        #logo_name{
+            display:flex;
+            flex-direction:row;
+            gap:1rem;
+            padding:0.4rem;
+        }
+        #logo{
+            height:2rem;
+            width:2rem;
+            border-radius:50%;
+            background-color:beige;
+            color:blue;
+            margin:auto;
+        }
+        #name{
+            font-size:2rem;
+            font-weight:600;
+        }
+        #nav_options{
+            display:flex;
+            flex-direction:row;
+            gap:1.3rem;
+            padding:0.6rem;
+        }
+        .nav_option_item{
+            font-size:1.3rem;
+            margin:auto;
+            font-weight:400;
+            color:black;
+            text-decoration:none;
+        }
+        .nav_option_item:hover{
+            color:#0000ff;
+        }
+        #contact_div{
+            padding:0.2rem;
+        }
+        #contact_div:hover{
+            transform:scale(1.02);
+        }
+        #contact_button{
+            color:white;
+            background-color:#2a2ac8;
+            padding:0.6rem;
+            padding-left:1rem;
+            padding-right:1rem;
+            margin:auto;
+            border:solid 0.2rem #2a2ac8;
+            border-radius:0.4rem;
+
+        }
+        #body1{
+            width:100vw;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-evenly;
+        }
+        #text{
+            height:400px;
+            width:600px;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            padding-top:2rem;
+        }
+        #body1_image{
+            background-color:blue;
+            height:400px;
+            width:400px;
+            border-radius:1.6rem;
+        }
+        #buttons{
+            display:flex;
+            flex-direction:row;
+            gap:1rem;
+            justify-content:flex-start;
+        }
+        #intro_heading_text{
+            display:flex;
+            flex-direction:column;
+            gap:1rem;
+        }
+        #intro_text{
+            font-size:1rem;
+            color:#0101b8;
+        }
+        #heading_text{
+            font-size:2.3rem;
+            font-weight:750;
+            line-height:2.3rem;
+            letter-spacing:-0.01rem;
+        }
+        #desc{
+            margin-top-bottom:4rem;
+
+            font-size:1.2rem;
+        }
+        #start_now_button{
+            border:solid 0.2rem blue;
+            border-radius:0.3rem;
+            background-color:blue;
+            color:white;
+            padding:0.4rem;
+            padding-left:1rem;
+            padding-right:1rem;
+        }
+        #start_now_button:hover{
+            transform:scale(1.02);
+        }
+        #take_tour_button{
+            border:solid 0.2rem black;
+            border-radius:0.3rem;
+            background-color:black;
+            color:white;
+            padding:0.4rem;
+            padding-left:1rem;
+            padding-right:1rem;
+        }
+        #take_tour_button:hover{
+            transform:scale(1.02);
+        }
+
+    </style>
+</head>
+<body>
+<div class="background">
+    <header id="header">
+        <div id="logo_name">
+            <img id="logo" src="assets/pen_logo.png" alt="logo"/>
+            <h2 id="name">StydySync</h2>
+        </div>
+        <div id="nav_options">
+            <a class="nav_option_item" href="#">Home</a>
+            <a class="nav_option_item" href="#">Features</a>
+            <a class="nav_option_item" href="#">Pricing</a>
+            <a class="nav_option_item" href="#">Blog</a>
+            <a class="nav_option_item" href="#">About</a>
+        </div>
+        <div id="contact_div">
+            <div id="contact_button">Contact us</div>
+        </div>
+    </header>
+    <div id="body1">
+        <div id="text">
+            <div id="intro_heading_text">
+                <span id="intro_text">Very proud to Introduce</span>
+                <span id="heading_text"> Seamless Learning for Brighter Futures</span>
+            </div>
+            <span id="desc">Our innovative platform offers an
+            effortless and seamless approach to learning,
+            empowering students of all ages to achieve
+                brighter futures. Join us on a transformative
+                journey to simplify education and unlock
+                your full potential</span>
+            <span id="buttons">
+                <span id="start_now_button">Start now</span>
+                <span id="take_tour_button">Take tour</span>
+            </span>
+        </div>
+        <div id="body1_image"></div>
+    </div>
+</div>
+
+</body>
+</html>
