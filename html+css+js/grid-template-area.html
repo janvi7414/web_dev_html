@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid-template-area</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+        .container{
+            height:100vh;
+            width:100vw;
+            background-color:#131313dd;
+            display:grid;
+            gap:0.6rem;
+            padding:0.6rem;
+
+            grid-template-areas:
+            "header header header"
+            "sidebar content1 content1"
+            "sidebar content2 content3"
+            "footer footer footer"
+            ;
+
+        }
+        .item{
+            color:white;
+            background-color:#e8d5b9cb;
+            border:0.2rem solid #e1af59cb;
+            padding:0.6rem;
+        }
+        #header{
+            grid-area:header;
+        }
+        #sidebar{
+            grid-area: sidebar;
+        }
+        #content1{
+            grid-area: content1;
+        }
+        #content2{
+            grid-area: content2;
+        }
+        #content3{
+            grid-area: content3;
+        }
+        #footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<!--grid-template-area is used to represent tabular grid using 2d matrix-->
+<div class="container">
+    <div class="item" id="header">header</div>
+    <div class="item" id="sidebar">sidebar</div>
+    <div class="item" id="content1">content1</div>
+    <div class="item" id="content2">content2</div>
+    <div class="item" id="content3">content3</div>
+    <div class="item" id="footer">footer</div>
+</div>
+</html>
