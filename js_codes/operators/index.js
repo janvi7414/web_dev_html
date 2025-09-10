@@ -30,3 +30,11 @@ syntax:   "cond ? true:false"*/
 let age=8;
 let status = (age>18) ? "i can vote":"i cannot vote";
 console.log(status);
+
+/*Logical operator (AND OR NOT)*/
+let f=(true&&false);
+console.log(f);
+let g=(false||false);
+console.log(g);
+let h=!(true);
+console.log(h);
