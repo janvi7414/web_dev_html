@@ -38,6 +38,29 @@
  /*operations on array
     push(add from end),pop,shift(pop from start),
     unshift(push from statrt),slice(takes out part from
-    one index to one index before last index),splic,
+    one index to one index before last index),splic
+    (arr content can be insert,add,remove),
     map,filer
     ,reduce,sort,indexof,find*/
+
+ let arr3 = [1,2,3,"Janvi",true,5];
+arr3.splice(2,3,"Spliced");
+ console.log(arr3);
+ /* to remove values from index 2 i.e. 3 values
+  and insert Spliced in there place */
+ arr3.splice(0,0,"Seema");
+ console.log(arr3);
+ //at 0 index remove no index and add Seema//
+
+
+ let arr4 = [10,20,30];
+ let arr5 = arr4.map((number)=>{
+     return number*number;
+ })
+
+ console.log(arr5);
+
+ let arr6 = arr4.map((number,index)=>{
+     console.log(index);
+ })
+
