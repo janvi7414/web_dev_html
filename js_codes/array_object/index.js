@@ -53,7 +53,7 @@ arr3.splice(2,3,"Spliced");
  //at 0 index remove no index and add Seema//
 
 
- let arr4 = [10,20,30];
+ let arr4 = [10,20,30,97,21,3];
  let arr5 = arr4.map((number)=>{
      return number*number;
  })
@@ -64,3 +64,16 @@ arr3.splice(2,3,"Spliced");
      console.log(index);
  })
 
+ //filter//
+ let arr9 = [10,4,1,2,5,36,77];
+ let even_arr = arr9.filter((number)=>{
+     return number%2===0;
+ })
+ console.log(even_arr);
+
+ let mixed_arr= [2,"Janvi",true,null];
+ let string_arr = mixed_arr.filter((value)=>
+ {
+     return typeof(value)==='string';
+ })
+console.log(string_arr);
