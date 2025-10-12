@@ -37,7 +37,7 @@
 
  /*operations on array
     push(add from end),pop,shift(pop from start),
-    unshift(push from statrt),slice(takes out part from
+    unshift(push from start),slice(takes out part from
     one index to one index before last index),splic
     (arr content can be insert,add,remove),
     map,filer
@@ -77,3 +77,20 @@ arr3.splice(2,3,"Spliced");
      return typeof(value)==='string';
  })
 console.log(string_arr);
+
+ let num_arr = mixed_arr.filter((value)=>
+ {
+     return typeof(value)==='number';
+ })
+ console.log(num_arr);
+
+ let arr10=[10,30,50];
+ let result1=arr10.reduce((acc,curr)=>
+ {
+     return acc+curr;//acc=acc+curr
+ },0)//here 0 is the initial value of acc//
+ /*if acc is initiate with value i.e.index
+ curr takes first value by default else if acc is not
+ initiated with a value curr takes index next value of
+ element by default and acc takes index of first one*/
+ console.log(result1);
