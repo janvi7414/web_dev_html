@@ -84,7 +84,7 @@ console.log(string_arr);
  })
  console.log(num_arr);
 
- let arr10=[10,30,50];
+ let arr10=[10,50,40,20];
  let result1=arr10.reduce((acc,curr)=>
  {
      return acc+curr;//acc=acc+curr
@@ -94,3 +94,36 @@ console.log(string_arr);
  initiated with a value curr takes index next value of
  element by default and acc takes index of first one*/
  console.log(result1);
+
+ let sorted_arr=arr10.sort();
+ console.log(sorted_arr);
+ arr10.reverse();
+ console.log(sorted_arr);
+
+ console.log(arr10.indexOf(40));//after sorting in reverse
+
+let arr11 = [21,23,25,5,2,23];
+ let answer = arr11.find((element)=>
+ {
+         return element%5===0;//for first answer only
+ });
+ console.log(answer);
+
+ arr11.forEach((element,index)=>
+ {
+     console.log("element: ",element," index: ", index);
+ })
+
+ console.log("\n");
+ let obj2 = {
+     name:"Janvi",
+     age: 2,
+ };
+ for(let key1 in obj2){
+     console.log(key1," ",obj2[key1]);
+ }
+
+ let name= "Janu";
+ for(let value1 of name){
+     console.log(value1);
+ }
