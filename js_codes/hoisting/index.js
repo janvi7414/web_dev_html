@@ -9,7 +9,8 @@
         the func decalration as well as operation before the
         calling even if func is called before it's declaration
 
-        hoisting is not for let and const keywords*/
+        hoisting is not for let and const keywords and also
+        not for class*/
 
 //var hoisting will show undefined//
 console.log(name);

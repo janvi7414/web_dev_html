@@ -28,3 +28,30 @@ let xpowery = (x,y) =>{
     return x**y;
 }
 console.log(xpowery(2,4));
+
+/*function is called first class citizen as it performs
+various operations*/
+
+let arr=
+[
+    //creating arr with indices 0,1,.. which are functions
+    function(a,b)
+    {
+        return a+b;
+    },
+    function(a,b)
+    {
+        return a-b;
+    },
+    function(a,b)
+    {
+        return a*b;
+    }
+
+];
+
+let sum2=arr[0];
+console.log(sum2(1,2));
+
+let sub2=arr[1];
+console.log(sub2(4,2));
