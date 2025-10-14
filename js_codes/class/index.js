@@ -75,3 +75,8 @@ array_function(null);
 //take null
 //when undefined value set it will take default value set
 
+function uppercase(value)
+{
+    console.log(value.toUpperCase());
+}
+uppercase("janvi");
