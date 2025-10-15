@@ -6,8 +6,40 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #spara{
+            display:none;
+        }
+    </style>
 </head>
 <body>
+<div id="div">This is div
+    <span id="fspan"> First Span</span>
+    <p id="fpara">this is first para</p>
+    <p id="spara"> this is second para</p>
+</div>
+<!--tpara is hidden on window-->
+
+<!--
+        console code and outputs
+
+let element=$0;
+undefined
+element;
+<div id=​"div">​…​</div>​
+element.innerHTML;
+'This is div\n    <span id="fspan"> First Span</span>\n    <p id="fpara">this is first para</p>\n    <p id="spara"> this is second para</p>\n'
+element.outerHTML;
+'<div id="div">This is div\n    <span id="fspan"> First Span</span>\n    <p id="fpara">this is first para</p>\n    <p id="spara"> this is second para</p>\n</div>'
+element.innerText;
+'This is div First Span\n\nthis is first para'
+element.textContent;
+'This is div\n     First Span\n    this is first para\n     this is second para\n'
+element.outerText;
+'This is div First Span\n\nthis is first para'
+-->
+
+
 <script src="index.js"></script>
 </body>
 </html>

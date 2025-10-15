@@ -48,8 +48,19 @@
             type $0->we will get the code for that element
 
 
-
-
+ To set or update the elements get by above ways
+    1. inner HTML :
+        to get or set the elements inside the element
+        provided including tag symbols and id,class,...
+    2. outer HTMl:
+        to get or set the elements inner to it and also
+        including itself
+    3. text-content:
+        to get text as coded in editor including each
+        tab,\n,... it will also show hidden div
+    4. inner Text:
+        to get text as it will appear on the window including
+        \n,.. it won't show hidden div
 
 
 
