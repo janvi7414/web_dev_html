@@ -1,0 +1,15 @@
+
+#parent_div{
+    background-color:#c86767;
+    display:flex;
+    justify-content:space-around;
+    gap:2rem;
+    padding:5rem;
+
+}
+
+#child1,#child2{
+    background-color:#dddddd;
+    height:200px;
+    width:200px;
+}
