@@ -63,7 +63,41 @@
         \n,.. it won't show hidden div
 
 
+Also to add child element inside a parent
 
-
+1. copy existing parent into new var
+parent_copy = document.querySelector('#parent_id')
+2. create child using 'document.createElement('tag')'
+3. add content using child.textContent="text";
+        to add child in the end
+4. append the child using 'parent.appendChild(child)'
+or
+4. using parent.insertAdjacentElement(position,child)'
+        beforebegin,afterbegin,beforeend,afterend
 
             */
+
+//code for console using inspect as well
+let mydiv=document.querySelector('#parent');
+let new_element=document.createElement('p');
+new_element.textContent="This is my para using DOM manipulation";
+mydiv.appendChild(new_element);
+
+let new_element2= document.createElement('h2');
+new_element2.textContent="This is h2 using DOM manipulation";
+mydiv.insertAdjacentElement('beforebegin',new_element2);
+
+//to remove child//
+//parent.removeChild(child);
+
+let first_para_copy=document.querySelector('#first_para');
+mydiv.removeChild(first_para_copy);
+
+//to find parent node using child
+//finding child of second_para_copy
+let second_para_copy=document.getElementById('second_para');
+second_para_copy.parentnode;
+
+
+
+
