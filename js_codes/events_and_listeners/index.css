@@ -11,7 +11,12 @@
 
 }
 
+        #anchor{
+    margine:2px;
+}
 
 /*#click_button:hover{*/
 /*    transform: scale(1.02);*/
 /*}*/
+
+
