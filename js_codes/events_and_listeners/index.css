@@ -1,0 +1,17 @@
+#click_button{
+    height:60px;
+    width:160px;
+    background:linear-gradient(to right,#d489d8f7,#ffa531cb);
+    padding:0.4rem;
+    border-radius:2rem;
+    color:white;
+    font-size:1.2rem;
+    box-shadow:4px 6px 2px #7a3030;
+    border: none;
+
+}
+
+
+/*#click_button:hover{*/
+/*    transform: scale(1.02);*/
+/*}*/
