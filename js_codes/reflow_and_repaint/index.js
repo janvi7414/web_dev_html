@@ -1,6 +1,6 @@
 /* to measure effeciency of a code we take time t1 in the begining and time t2 at the end of the code then
 t2-t1 gives the time required for execution
-using performance.now()
+using performance.now() this is very accurate way
 
 
 no. of reflow and repaint required defines the effeciency of the code which is directly proportional
@@ -47,9 +47,10 @@ document.body.appendChild(div_copy);
 let t4=performance.now();
 console.log("way2 performance time required: "+(t4-t3));
 
-//document fragment: it is a light weight document object
+//document fragment: it is a light weight document object bcos this does not require any repaint or reflow for appending
 //this is almost similar in effeciency with way2
 //fragement is created using document.createDocumentFragement()
+
 
 let t5=performance.now();
 let fragement=document.createDocumentFragment();
