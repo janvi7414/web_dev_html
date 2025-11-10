@@ -59,7 +59,7 @@ function change_text2(event)
 }
 anchor_copy.addEventListener('click',change_text2);
 
-/*While using Event Listener it should be used mindfullt
+/*While using Event Listener it should be used mindfully
 //when we are having multiple child nodes and we are adding same eventlistener on
     each of them then
 way1: using loop creating link for every child node */
