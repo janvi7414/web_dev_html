@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const hardSpan = document.querySelector("#hardSpan");
     const tilesDiv = document.querySelector("#tilesDiv");
 
-
     /*
 ^ means the match must start at the beginning of the string.
 $ means the match must end at the end of the string.
@@ -58,6 +57,7 @@ _ inside [] allows the underscore character.
                 searchButton.textContent = "searching..";
                 searchButton.disabled = true;
 
+                const proxyUrl = `https://cors-anywhere.herokuapp.com/`;
                 const targetUrl = `https://leetcode.com/graphql/`;
                 const myHeaders = new Headers();
                 myHeaders.append("content-type", "application/json");
@@ -74,13 +74,22 @@ _ inside [] allows the underscore character.
             redirect: "follow"
         };
 
-        const response = await fetch(targetUrl, requestOptions);
+                //as the direct request from local machine is rejected by leetcode
+                //we are using a proxy url using demo server whose url is concatinated with the target url
+                // from local machine it goes to this demo server which sends only target url ahead
+                // serach "cors anywhere demo server"  3rd webiste and copy "https://cors-anywhere.herokuapp.com/"
+                //run it on chrome and click the button
+
+        const response = await fetch(proxyUrl+targetUrl, requestOptions);
                 if(!response.ok){
                     throw new Error("Unable to fetch the user details");
 
                 }
-                const data = await response.json();
-                console.log("Logging data: ",data);
+                const parsedData = await response.json();
+                console.log("Logging data: ",parsedData);
+
+                displayUserData(parsedData);
+
             }
             catch(error){
                 tilesDiv.innerHTML = `<p>No data Found</p>`;
@@ -95,6 +104,34 @@ _ inside [] allows the underscore character.
 
         }
 
+    //to populate the data
+    // to simplify the data copy it from console and paste it online searching jsformatter
+//    function updateProgress(solved,total,spanId,innerDiv){
+//        const progressPercent = (solved/total)*100;
+//        innerDiv.style.setProperty("--progress-degree", `${progressPercent}`);
+//        spanId.textContent = `${solved}/${total}`;
+//    }
+
+
+    function displayUserData(parsedData){
+        const totalQues = parsedData.data.allQuestionsCount[0].count;
+        const totalEasyQues = parsedData.data.allQuestionsCount[1].count;
+        const totalMediumQues = parsedData.data.allQuestionsCount[2].count;
+        const totalHardQues = parsedData.data.allQuestionsCount[3].count;
+
+        const totalSolvedQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[0].count;
+        const totalSolvedEasyQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[1].count;
+        const totalSolvedMediumQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[2].count;
+        const totalSolvedHardQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[3].count;
+
+        updateProgress(totalSolvedEasyQues,totalEasyQues,easySpan,easyDiv);
+        updateProgress(totalSolvedMediumQues,totalMediumQues,mediumSpan,mediumDiv);
+        updateProgress(totalSolvedHardQues,totalHardQues,hardSpan,hardDiv);
+
+
+
+    }
+
 
     //after clicking search button
     searchButton.addEventListener('click',function(){
@@ -105,6 +142,7 @@ _ inside [] allows the underscore character.
             fetchUserDetails(username);
         }
     })
+
 
 });
 
