@@ -77,5 +77,18 @@ async function postData(){
 
 postData();
 
+/*
+    json: javascript object notation is a lighweight, text-based
+    formate used to store and exchange data between computers,
+    servers, and applications.
 
+    it is key-value paired
+    easy to understand to human as well as computers
+    has rules:
+        Keys and strings must be in double quotes.
+        Data must be valid types: string, number, boolean, array, object, null.
+        No comments allowed.
+    it is easy to parse i.e. to convert in desired formate
+
+*/
 
