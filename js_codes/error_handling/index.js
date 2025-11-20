@@ -2,6 +2,12 @@
 /* error is something that inturrupts the natural
 flow of execution of program*/
 //visit gov API error code list
+/*
+try → holds code that might fail.
+catch → handles the error if one happens.
+throw → manually creates an error and is catched by nearest catch block.
+finally → runs no matter what.
+*/
 
 //try and catch
 try{
