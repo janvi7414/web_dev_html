@@ -8,7 +8,7 @@ resources finish loading.*/
 */
 
 
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function(){
 
     const searchButton = document.querySelector("#searchButton");
     const usernameInput = document.querySelector("#usernameInput");
@@ -46,10 +46,11 @@ _ inside [] allows the underscore character.
             alert("Invalid username..!");
         }
         return isMatching;
+    }
 
         //func to fetched details of username using API thus async
         async function fetchUserDetails(username){
-            const url = `https://leetcode-stats-api.herokuapp,com/${username}`;
+
             /* backticks `` are used as this allows variable inclusion whereas
                 "" or '' doesnt */
             try{
@@ -57,12 +58,28 @@ _ inside [] allows the underscore character.
                 searchButton.textContent = "searching..";
                 searchButton.disabled = true;
 
-                const response = await fetch(url);
+                const targetUrl = `https://leetcode.com/graphql/`;
+                const myHeaders = new Headers();
+                myHeaders.append("content-type", "application/json");
+
+                const graphql = JSON.stringify({
+                    query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
+                    variables:{"username": `${username}`}
+                })
+
+        const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: graphql,
+            redirect: "follow"
+        };
+
+        const response = await fetch(targetUrl, requestOptions);
                 if(!response.ok){
                     throw new Error("Unable to fetch the user details");
 
                 }
-                const data = response.json();
+                const data = await response.json();
                 console.log("Logging data: ",data);
             }
             catch(error){
@@ -78,15 +95,27 @@ _ inside [] allows the underscore character.
 
         }
 
-    }
+
     //after clicking search button
     searchButton.addEventListener('click',function(){
         const username = usernameInput.value;
         console.log("entered username is: ",username);
-        if(validUsername(username)){
+        if(validateUsername(username)){
             //if valid then checking if available and fetching data
             fetchUserDetails(username);
         }
     })
 
 });
+
+
+/*
+to get the desired url
+    1. inspect the leetcode profile - > networks -> reload the page
+    2. check in reponse section
+    3. serach for "graphql" -> visite each graphql step by step to get the response as totalQuestionCount, easy count etc
+    4. go to headers seciton and copy the request url
+    5. const graphql value is copied from payload
+    A query is a request for information, often sent in a URL or to a database.
+
+*/
