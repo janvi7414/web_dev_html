@@ -56,6 +56,17 @@ const options = {
     headers: myHeader,
 };
 
+/*
+
+The name myHeader is user-defined—it can be anything.
+"content-Type" tells the server what format the request body is in.
+"application/json" means the body contains JSON data.
+body: is a property inside the fetch options.
+It must be a string when sending JSON.
+JSON.stringify() converts a JavaScript object into a JSON string.
+{ username: "janvi chichudde" } is the data being sent.
+*/
+
 //creating the funciton for posting data
 
 async function postData(){
