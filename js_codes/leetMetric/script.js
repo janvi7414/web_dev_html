@@ -178,6 +178,7 @@ to get the desired url
     5. const graphql value is copied from payload
     A query is a request for information, often sent in a URL or to a database.
 
+activate demo server always before running
 
 .map() is one of the most important and commonly used JavaScript array methods.
 It lets you transform each item in an array and returns a new array with the transformed results.
