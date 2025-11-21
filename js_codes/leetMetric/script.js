@@ -92,7 +92,7 @@ _ inside [] allows the underscore character.
 
             }
             catch(error){
-                tilesDiv.innerHTML = `<p>No data Found</p>`;
+                tilesDiv.innerHTML = `<p>${error.meassage}</p>`
             }
             finally{
                 //restoring serach button
@@ -106,11 +106,13 @@ _ inside [] allows the underscore character.
 
     //to populate the data
     // to simplify the data copy it from console and paste it online searching jsformatter
-//    function updateProgress(solved,total,spanId,innerDiv){
-//        const progressPercent = (solved/total)*100;
-//        innerDiv.style.setProperty("--progress-degree", `${progressPercent}`);
-//        spanId.textContent = `${solved}/${total}`;
-//    }
+    function updateProgress(solved, total, spanId, innerDiv){
+        const progressPercent = (solved/total)*100;
+        innerDiv.style.setProperty("--progress-degree", `${progressPercent}%`);
+        spanId.textContent = `${solved}/${total}`;
+    }
+
+
 
 
     function displayUserData(parsedData){
@@ -127,6 +129,26 @@ _ inside [] allows the underscore character.
         updateProgress(totalSolvedEasyQues,totalEasyQues,easySpan,easyDiv);
         updateProgress(totalSolvedMediumQues,totalMediumQues,mediumSpan,mediumDiv);
         updateProgress(totalSolvedHardQues,totalHardQues,hardSpan,hardDiv);
+
+        //displaying data in tiles
+        //creating an array
+        const tilesArr = [
+            {label: "Total Solved Ques: ", value: parsedData.data.matchedUser.submitStats.acSubmissionNum[0].count},
+            {label: "Total Solved Easy Ques: ", value: parsedData.data.matchedUser.submitStats.acSubmissionNum[1].count},
+            {label: "Total Solved Medium Ques: ", value: parsedData.data.matchedUser.submitStats.acSubmissionNum[2].count},
+            {label: "Total Solved Hard Ques: ", value: parsedData.data.matchedUser.submitStats.acSubmissionNum[3].count}
+        ];
+
+        console.log("Tiles data is: ",tilesArr);
+        tilesDiv.innerHTML = tilesArr.map(
+            data=>  `
+            <div class="tile">
+                <h3>${data.label}</h3>
+                <p>${data.value}</p>
+            </div>
+        `
+        )
+            .join("");//join array into a single HTML string
 
 
 
@@ -155,5 +177,9 @@ to get the desired url
     4. go to headers seciton and copy the request url
     5. const graphql value is copied from payload
     A query is a request for information, often sent in a URL or to a database.
+
+
+.map() is one of the most important and commonly used JavaScript array methods.
+It lets you transform each item in an array and returns a new array with the transformed results.
 
 */
