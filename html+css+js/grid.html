@@ -40,12 +40,10 @@
             grid-column-end:4;
         }
         #item2{
-            grid-row-start:2;
-            grid-row-end:4;
+            grid-row:2/4;
         }
         #item3{
-            grid-column-start:2;
-            grid-column-end:4;
+            grid-column:2/4;
         }
 
 /*        rest it has attributes same as flex e.g.: justify-items,justify-self, place-justify etc*/
@@ -64,3 +62,17 @@
 </div>
 </body>
 </html>
+
+
+<!--
+       Col Line 1   Col Line 2   Col Line 3   Col Line 4   Col Line 5   Col Line 6
+            ↓            ↓            ↓            ↓            ↓            ↓
+Row Line 1 → +------------+------------+------------+------------+------------+
+
+             |  Row1/Col1 |  Row1/Col2 |  Row1/Col3 |  Row1/Col4 |  Row1/Col5 |
+Row Line 2 → +------------+------------+------------+------------+------------+
+
+             |  Row2/Col1 |  Row2/Col2 |  Row2/Col3 |  Row2/Col4 |  Row2/Col5 |
+Row Line 3 → +------------+------------+------------+------------+------------+
+
+-->

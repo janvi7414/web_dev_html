@@ -20,10 +20,13 @@
             grid-template-columns:repeat(auto-fit, minmax(200px,250px));
             justify-content:center;
         }
+
+        /* minmax(200px, 250px): Sets a rule for each column track. It must never shrink below 200px, and it should never grow larger than 250px.auto-fit: Tells the browser to look at the screen width and pack in as many 200px columns as physically possible in one row.The Final Stretch: If there is leftover empty space on the screen, the browser divides that space equally and stretches the columns up toward their 250px maximum.
+        */
         .item{
             text-align:center;
             height:50px;
-            width:200px;
+            margin:2px;
             background-color:#d6cece;
         }
 

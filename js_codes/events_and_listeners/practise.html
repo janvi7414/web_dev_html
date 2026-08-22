@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            
+            .container{
+                background-color:blue;
+                padding:10px;
+                display:grid;
+                grid-template-rows:repeat(5,1fr);
+                grid-template-columns: 1fr 1fr;
+            }
+            .item
+            {
+                background-color:red;
+                margin:10px;
+            } 
+            #item1, #item2{
+                grid-column-start:1;
+                grid-column-end:3;
+            }
+            #item3{
+                grid-row-start:3;
+                grid-row-end:5;
+            }
+            #item6{
+                grid-column-start:1;
+                grid-column-end:2;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+    <div class="item" id="item1">Item 1</div>
+    <div class="item" id="item2">Item 2</div>
+    <div class="item" id="item3">Item 3</div>
+    <div class="item" id="item4">Item 4</div>
+    <div class="item" id="item5">Item 5</div>
+    <div class="item" id="item6">Item 6</div>
+
+</div>
+    </body>
+</html>
+
+<!--
+- no space before and after semicolon
+- background-color defined without ""
+- uses dash for naming separation with all lowercase
+- to add comment <!-- in html
+- comment in css /**/
+- semicolon after each pair;
+- +X in + side on x-axis -ve on it's respective side but +Y is in bottom i.e. -ve Y axis
+- key-value pair using colon in css and using equals to in html
+- <link href="style.css">  -> for css file
+  <script src="script.js"></script>   -> for js file
+- in js uses camel casing for naming 
+-->
