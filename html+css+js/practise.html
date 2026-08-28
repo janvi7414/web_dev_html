@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Practise doc</title>
+        <style>
+            .box{
+                height:50vh;
+                width:50vw;
+                background-color:rgb(161, 161, 46);
+                padding:2px;
+                box-sizing:border-box;
+            }
+            .div{
+                background-color:red;
+                border-radius:50%;
+                height:50px;
+                width:50px;
+                top:10px;
+                left:0px;
+                position:relative;
+                animation-name:myanime;
+                animation-duration:3s;
+                animation-delay:2s;
+                animation-timing-function:cubic-bezier(0.5,1,0.2,2);
+                animation-fill-mode: backwards;
+                animation-iteration-count:2;
+                animation-direction:alternate-reverse;
+            @keyframes myanime{
+                from{
+
+                }
+                to{
+                    top:10px;
+                    left:250px;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class ="box">
+            <div class = "div">
+
+            </div>
+        </div>>
+    </body>
+</html>
